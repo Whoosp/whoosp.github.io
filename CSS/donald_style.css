@@ -1,0 +1,136 @@
+/*Colour pallets:
+Dark Goldenrod = #BF4A06
+Chocolate = #DC7314
+Saddle Brown = #280B08
+Wheat = #F5CC99
+Dark Salmon = #E2A05B */
+
+body{
+    font-family: Arial;
+    background: #F5CC99;
+}
+
+#main{
+    min-height: 300px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+
+#main > article{
+    display: flex;
+    flex-flow: column;
+    margin: 4px;
+    padding: 5px;
+    background: white;
+    flex: 2 1 90%;
+    order: 1;
+}
+
+article > .RightStep{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #BF4A06;
+    justify-content: flex-start;
+    display: flex;
+    flex-flow: row;
+}
+
+.RightStep > .Picture{
+    order: 1;
+}
+
+.RightStep > .Text{
+    max-width: 50%;
+    order: 2;
+}
+
+article > .LeftStep{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #E2A05B;
+    margin-left: 30%;
+    justify-content: flex-end;
+    display: flex;
+    flex-flow: row;
+}
+
+.LeftStep > .Picture{
+    order: 1;
+}
+
+.LeftStep > .Text{
+    flex: 2 1 50%;
+    order: 2;
+}
+
+header{
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 200px;
+    background: #E2A05B;
+}
+
+nav{
+    margin: 4px;
+    padding: 5px;
+
+    background: #DC7314;
+    display: flex;
+    flex-flow: row;
+}
+
+nav > #MainPage{
+    margin: 4px;
+    padding: 5px;
+    background: #DC7314;
+    flex: 1 6 10px;
+    order: 1;
+}
+
+nav > #RecipeOne{
+    margin: 4px;
+    padding: 5px;
+    background: #DC7314;
+    flex: 1 6 10px;
+    order: 2;
+}
+
+nav > #RecipeTwo{
+    margin: 4px;
+    padding: 5px;
+    background: #DC7314;
+    flex: 1 6 10px;
+    order: 3;
+}
+
+nav > #ConversionTable{
+    margin: 4px;
+    padding: 5px;
+    background: #DC7314;
+    flex: 1 6 10px;
+    order: 4;
+}
+
+footer{
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 50px;
+    background: white;
+}
+
+@media all and (max-width: 640px) {
+    #main, #page, nav {
+        flex-direction: column;
+    }
+    #main > article, #main > nav{
+        order: 0;
+    }
+    #main > nav, header, footer {
+        min-height: 200px;
+        max-height: 200px;
+    }
+}
